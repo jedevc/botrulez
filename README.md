@@ -3,19 +3,18 @@
 These guidelines exist as a standard for which bots should obey to be
 consitent with each other. The goal of a bot is to enhance the experience
 of the user and one of the ways to do this is to provide a unified interface
-between bots.
-
-Note that all bots do not have to obey these standards. There are sometimes
-very good reasons as to why a bot may not be able to implement the following
-commands. However, it is **strongly** recommended that you do so.
+between bots. These standards are all about improving the user experience
+of bots - if you believe that breaking some of these standards would improve
+the bot - then go ahead! Rules are meant to be broken (if you know what
+you're doing).
 
 ***
 
 # Commands
 
 The user of the bot should be able to predict when the bot will appear. This
-helps to avoid "spammy" bots. Therefore, bots should preferably only speak
-when instructed to.  The preferred way for this is to use commands.
+helps to avoid "spammy" bots. Therefore, bots should mostly be interacted with
+using commands. 
 
 A command is a statement beinning with a '!' with the command name with possibly
 arguments following. They should match this regex - `/^!\S+(\s+\S+)*$/`.
