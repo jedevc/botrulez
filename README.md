@@ -66,6 +66,9 @@ the bot became active.
 The time should be formatted as such with the most significant time measurement
 appearing first. Like, [so](http://xkcd.com/1179/).
 
+If you wish to include more or less detail, the seconds can be removed or
+milliseconds can be added.
+
 The ideal response would look like this:
 
     BotName: /me has been up since 2015-08-08 16:09:50 UTC (2d 3h 0m 4s)
