@@ -7,7 +7,7 @@ between bots.
 
 Note that all bots do not have to obey these standards. There are sometimes
 very good reasons as to why a bot may not be able to implement the following
-commands. However, it is *STRONGLY* recommended that you do so.
+commands. However, it is **strongly** recommended that you do so.
 
 ***
 
@@ -18,7 +18,7 @@ should be able to predict when the bot will appear. The preferred way for
 this is to use commands.
 
 A command is a statement beinning with a '!' with the command name with possibly
-arguments following. They should match this regex - /^!.+\s?.*$/.
+arguments following. They should match this regex - /^!\S+(\s+\S+)*$/.
 
 ***
 
@@ -63,12 +63,16 @@ Specific syntax:
 
 ### !uptime
 When an '!uptime' command is given, then the bot specified should reply with the
-amount of time it has been active and online without crashing.
+amount of time it has been active and online without crashing and the time that
+the bot became active. 
 
 The time should be formatted as such with the most significant time measurement
-appearing first:
+appearing first.
 
-DD/HH/MM/SS
+The ideal response would look like this:
+
+    BotName: /me has been up since 2015-08-08 16:09:50 UTC and has been up for
+    2d 3h 0m 4s.
 
 Syntax:
 
