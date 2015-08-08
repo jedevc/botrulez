@@ -83,9 +83,9 @@ the programmer may with to implement them as a way to give the user further
 control over the bot.
 
 ### !pause and !restore
-When the '!pause' command is given to a bot, then the bot should cease all it's
+When the '!pause' command is given to a bot, then the bot should cease all its
 activity but continue to remain in the nick list. When the '!restore' commmand
-is given to a paused bot, then the bot should continue to perform it's duties.
+is given to a paused bot, then the bot should continue to perform its duties.
 The uptime should then be restarted at this point.
 
 Syntax:
@@ -103,7 +103,7 @@ Syntax:
     !kill @BotName
 
 ### !restart
-If the '!restart' command is given to a bot, then it should restart all of it's
+If the '!restart' command is given to a bot, then it should restart all of its
 processes, and appear again. This may be helpful in a bot that is not yet bug
 free and requires occasional restarts to fix it. After this command, the uptime
 should be restarted.
