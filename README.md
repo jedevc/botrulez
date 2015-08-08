@@ -64,12 +64,11 @@ amount of time it has been active and online without crashing and the time that
 the bot became active. 
 
 The time should be formatted as such with the most significant time measurement
-appearing first.
+appearing first. Like, [so](http://xkcd.com/1179/).
 
 The ideal response would look like this:
 
-    BotName: /me has been up since 2015-08-08 16:09:50 UTC and has been up for
-    2d 3h 0m 4s.
+    BotName: /me has been up since 2015-08-08 16:09:50 UTC (2d 3h 0m 4s)
 
 Syntax:
 
