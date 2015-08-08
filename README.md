@@ -18,7 +18,7 @@ should be able to predict when the bot will appear. The preferred way for
 this is to use commands.
 
 A command is a statement beinning with a '!' with the command name with possibly
-arguments following. They should match this regex - /^!\S+(\s+\S+)*$/.
+arguments following. They should match this regex - `/^!\S+(\s+\S+)*$/`.
 
 ***
 
