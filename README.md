@@ -13,9 +13,9 @@ commands. However, it is **strongly** recommended that you do so.
 
 # Commands
 
-Bots should preferably not reply to comments unannounced. The user of the bot
-should be able to predict when the bot will appear. The preferred way for
-this is to use commands.
+The user of the bot should be able to predict when the bot will appear. This
+helps to avoid "spammy" bots. Therefore, bots should preferably only speak
+when instructed to.  The preferred way for this is to use commands.
 
 A command is a statement beinning with a '!' with the command name with possibly
 arguments following. They should match this regex - `/^!\S+(\s+\S+)*$/`.
