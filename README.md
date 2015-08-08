@@ -40,9 +40,6 @@ Specific syntax:
 
     !ping @BotName
 
-Each bot is strongly recommended to respond to the general ping, however, the
-bot is not required to respond to the specific ping.
-
 ### !help
 When a help request is made using '!help' then the bot should resond with a help
 text detailing the purpose of the bot and how to use it.
