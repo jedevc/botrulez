@@ -101,6 +101,10 @@ Sometimes the bot will go out of control and the user may find it neccessary to
 terminate it. When the '!kill' command is given the bot will cease to exist
 immediately. It will exit the room and not appear again even if called for.
 
+However, if you find it neccessary to kill a bot that does not belong to you,
+please explain to the creator of the bot your problems with it so that they
+will be able to fix it.
+
 Syntax:
 
     !kill @BotName
