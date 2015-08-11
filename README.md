@@ -72,6 +72,8 @@ The ideal response would look like this:
 
     BotName: /me has been up since 2015-08-08 16:09:50 UTC (2d 3h 0m 4s)
 
+There is no general response: only specific responses. 
+
 Syntax:
 
     !uptime @BotName
