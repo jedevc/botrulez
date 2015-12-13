@@ -17,7 +17,7 @@ helps to avoid "spammy" bots. Therefore, bots should mostly be interacted with
 using commands. 
 
 A command is a statement beinning with a '!' with the command name with possibly
-arguments following. They should match this regex - `/^!\S+(\s+\S+)*$/`.
+arguments following. They should match this regex - `/^!\S+(\s+\S+)*\s*$/`.
 
 ***
 
