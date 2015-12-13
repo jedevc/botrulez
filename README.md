@@ -1,80 +1,90 @@
 # Botrulez
 
-These guidelines exist as a standard for which bots should obey to be
-consitent with each other. The goal of a bot is to enhance the experience
-of the user and one of the ways to do this is to provide a unified interface
-between bots. These standards are all about improving the user experience
-of bots - if you believe that breaking some of these standards would improve
-the bot - then go ahead! Rules are meant to be broken (if you know what
-you're doing).
+These guidelines exist as a standard which bots should obey to be consistent
+with each other. The goal of a bot is to enhance the experience of the user
+and one of the ways to do so is to provide a unified interface across bots.
+These standards are all about improving the user experience of bots; if you
+believe that breaking some of them would improve the bot, you may go ahead —
+rules are meant to be broken (if you know what you're doing).
 
 ***
 
 # Commands
 
 The user of the bot should be able to predict when the bot will appear. This
-helps to avoid "spammy" bots. Therefore, bots should mostly be interacted with
+helps avoid "spammy" bots. Therefore, bots should mostly be interacted with
 using commands. 
 
-A command is a statement beinning with a '!' with the command name with possibly
-arguments following. They should match this regex - `/^!\S+(\s+\S+)*\s*$/`.
+A command is a statement beinning with a `!`, immediately followed by the
+command name, with arguments possibly following. Therefore, a command would
+match the regex `/^!(\S+)(\s+(\S+))*\s*$/`, where the first grouping contains
+the command name, and the third one the individual arguments.
 
 ***
 
 ## Standard commands
 
+This section specifies some commands of use for a large majority of bots.
+
 ### !ping
-When a '!ping' is sounded, the bot should reply with a 'Pong!'.
-Other replies are permitted - however they should be concise and predictable.
+When a `!ping` is sounded, the bot should reply with a `Pong!`. Other replies
+are permitted, however, they should be concise and predictable.
 
-There are 2 types of ping - general and specific.
+There are 2 types of ping — *general* and *specific*.
 
-In a general ping, every bot should reply with its response whereas in a
+In a general ping, every bot should reply with its response, whereas in a
 specific ping, only the bot that is specified in the command should reply.
 
-General syntax:
+**General syntax:**
 
     !ping
-Specific syntax:
+
+**Specific syntax:**
 
     !ping @BotName
 
 ### !help
-When a help request is made using '!help' then the bot should resond with a help
+When a help request is made using `!help`, the bot should resond with a help
 text detailing the purpose of the bot and how to use it.
 
 As with pings, there are two variations on the command.
 
-With a general help request, each bot should reply with a concise description of
+To a general help request each bot should reply with a concise description of
 the purpose of the bot. A specific help request reply should contain a more
-detailed description of the bot and a list of all the commands that a bot will
-reply to and how to use them.
+detailed description of the bot and a list of all the commands that a bot
+will reply to and how to use them.
 
-General syntax:
+**General syntax:**
 
     !help
-Specific syntax:
+
+**Specific syntax:**
 
     !help @BotName
 
 ### !uptime
-When an '!uptime' command is given, then the bot specified should reply with the
-amount of time it has been active and online without crashing and the time that
-the bot became active. 
+When an `!uptime` command is given, the bot specified should reply with the
+amount of time it has been active and online without crashing and the time
+when the bot became active. While the two pieces of information are
+redundant, they are both equally useful for human users.
 
-The time should be formatted as such with the most significant time measurement
-appearing first. Like, [so](http://xkcd.com/1179/).
+The time should be formatted with the most significant time measurement
+appearing first, as [ISO 8601](http://xkcd.com/1179/) specifies.
 
-If you wish to include more or less detail, the seconds can be removed or
-milliseconds can be added.
+The ideal response would look like this — more or less detail may be added
+at wish (although the reply should be still useful) —:
 
-The ideal response would look like this:
+    BotName: /me is up since 2015-08-08 16:09:50 UTC (2d 3h 4s)
 
-    BotName: /me has been up since 2015-08-08 16:09:50 UTC (2d 3h 0m 4s)
+**General syntax:**
 
-There is no general response: only specific responses. 
+Differently to the other commands, a general reply is not mandated (why would
+one want to know all the bots' uptime?); apart from that, the syntax is
+similar:
 
-Syntax:
+    !uptime
+
+**Specific syntax:**
 
     !uptime @BotName
 
@@ -82,40 +92,54 @@ Syntax:
 
 ## Non-standard commands
 
-In some cases bots may be forced to respond to these commands by the platform or
-the programmer may with to implement them as a way to give the user further
-control over the bot.
+In some cases bots may be forced to respond to these commands by the platform,
+or the programmer may wish to implement them as a way to give the end-user
+further control over the bot.
 
 ### !pause and !restore
-When the '!pause' command is given to a bot, then the bot should cease all its
-activity but continue to remain in the nick list. When the '!restore' commmand
-is given to a paused bot, then the bot should continue to perform its duties.
-The uptime should then be restarted at this point.
+When the `!pause` command is issued to a bot, then the bot should cease all
+of its activity but continue to remain in the nick list. When the `!restore`
+commmand is given to a paused bot, the bot should continue performing its
+duties again; the uptime should be restarted at this point.
 
-Syntax:
+**Syntax:**
 
     !pause @BotName
+
     !restore @BotName
 
 ### !kill
-Sometimes the bot will go out of control and the user may find it neccessary to
-terminate it. When the '!kill' command is given the bot will cease to exist
-immediately. It will exit the room and not appear again even if called for.
+Sometimes, a bot might go out of control and the user may find it neccessary
+to terminate it. When the `!kill` command is given the bot shall cease to
+exist immediately; it shall exit the room and not appear again even if called
+for.
 
-However, if you find it neccessary to kill a bot that does not belong to you,
-please explain to the creator of the bot your problems with it so that they
-will be able to fix it.
+If you — as an end-user — find it neccessary to kill a bot that does not
+belong to you, please explain to the creator of the bot your problems with it
+to enable them to fix it.
 
-Syntax:
+**Syntax:**
 
     !kill @BotName
 
 ### !restart
-If the '!restart' command is given to a bot, then it should restart all of its
-processes, and appear again. This may be helpful in a bot that is not yet bug
-free and requires occasional restarts to fix it. After this command, the uptime
-should be restarted.
+If the `!restart` command is given to a bot, the bot should restart all of
+its activities, and appear again. This may be helpful in a bot that is not
+bug free and requires occasional restarts to fix issues. After this command,
+the uptime should be restarted.
 
-Syntax:
+**Syntax:**
 
     !restart @BotName
+
+### !conjure
+Some bots do perform an idiomatical action under certain conditions (like,
+a *@tumbleweed* bot would "roll by" if the room is silent for a long time);
+to let the bot perform the action unconditionally, the `!conjure` command
+may be used.
+
+**Syntax:**
+
+    !conjure @BotName
+
+***
