@@ -74,7 +74,7 @@ appearing first, as [ISO 8601](http://xkcd.com/1179/) specifies.
 The ideal response would look like this — more or less detail may be added
 at wish (although the reply should be still useful) —:
 
-    BotName: /me is up since 2015-08-08 16:09:50 UTC (2d 3h 4s)
+    BotName: /me has been up since 2015-08-08 16:09:50 UTC (2d 3h 4s)
 
 **General syntax:**
 
